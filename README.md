@@ -2,29 +2,29 @@
 
 # Internship Task: VPC and Subnet Creation
 
-## 📄 Overview
+##  Overview
 
 **Objective:** The goal of this task is to design and implement a fundamental cloud network infrastructure. You will create a Virtual Private Cloud (VPC) with one public subnet (for internet-facing resources) and one private subnet (for secure, internal resources), configure internet access correctly, and document the setup.
 
 ---
 
-## 📋 Prerequisites
+##  Prerequisites
 
 * An active **AWS**  account (Free Tier is sufficient).
 
 ---
 
-## 🧭 Detailed Mini Guide (Step-by-Step)
+##  Detailed Mini Guide (Step-by-Step)
 
 This guide primarily uses AWS terminology, but the concepts are transferable to GCP.
 
-### ⿡ Login to Cloud Console
+###  Login to Cloud Console
 
 1.  Log in to your AWS Management Console.
 2.  In the search bar, type **"VPC"** and navigate to the VPC Dashboard.
 3.  Ensure you are in your desired AWS Region (e.g., `us-east-1`).
 
-### ⿢ Create a Virtual Private Cloud (VPC)
+###  Create a Virtual Private Cloud (VPC)
 
 1.  From the VPC Dashboard, click **"Create VPC"**.
 2.  Select **"VPC only"**.
@@ -33,7 +33,7 @@ This guide primarily uses AWS terminology, but the concepts are transferable to 
     * *(This defines your main private cloud network, giving you 65,536 private IP addresses.)*
 5.  Click **"Create VPC"**.
 
-### ⿣ Create Subnets
+###  Create Subnets
 
 Now, you'll create two subnets within your `My-vpc-01`.
 
@@ -63,7 +63,7 @@ Now, you'll create two subnets within your `My-vpc-01`.
 5.  Click **"Save"**.
     * *(The `My-vpc-Prisub-1` should have this **disabled** by default.)*
 
-### ⿤ Create and Attach an Internet Gateway (IGW)
+###  Create and Attach an Internet Gateway (IGW)
 
 This allows your public subnet to communicate with the internet.
 
@@ -74,7 +74,7 @@ This allows your public subnet to communicate with the internet.
 5.  Select the new `My-vpc-01-IGW` from the list. Click **"Actions"** -> **"Attach to VPC"**.
 6.  Select your `My-vpc-01-IGW` and click **"Attach internet gateway"**.
 
-### ⿥ Route Table Configuration
+###  Route Table Configuration
 
 This step directs traffic from your subnets.
 
